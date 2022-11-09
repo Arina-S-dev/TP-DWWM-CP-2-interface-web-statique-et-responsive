@@ -1,0 +1,297 @@
+#container {
+    display: flex;
+}
+
+section {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* SECTION DE GAUCHE */
+
+.left {
+    background-size: cover;
+    background-position: center;
+    justify-content: space-between;
+    padding: 3em 2em 1em;
+    /* équivalent à padding: 3em 2em 1em 2em; */
+    color: white;
+    text-shadow: 1px 1px 3px black;
+}
+
+.left--nicole {
+    background-image: url(../images/nicole.jpg);
+}
+
+.left--gabriel {
+    background-image: url(../images/gabriel.jpg);
+}
+
+.title {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.title--left {
+    text-transform: uppercase;
+    background-image: url(../images/onews.svg);
+    background-size: 35px;
+    background-repeat: no-repeat;
+    background-position: 0 5px;
+    padding-left: 50px;
+    width: 100px;
+    line-height: 1.2;
+}
+
+.news {
+    text-align: right;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 2em 1em 2em 3em;
+}
+
+.news__subtitle {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+
+.news__subtitle__extra {
+    font-size: 0.9rem;
+    font-style: italic;
+    font-weight: normal;
+}
+
+.news__content {
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+
+.footer__menu {
+    font-size: 0.9em;
+    display: flex;
+    justify-content: flex-end;
+    /* text-align: right; */
+}
+
+/* .footer__menu li {
+    display: inline;
+} */
+
+.footer__menu__link {
+    margin: 1em;
+}
+
+.footer__menu__link:hover {
+    text-decoration: underline;
+}
+
+/* SECTION DE DROITE */
+
+.header {
+    background-color: #f9f9f9;
+    padding: 1.5em;
+}
+
+.main {
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    overflow: auto;
+}
+
+.article {
+    width: 50%;
+    border: 1px solid #eaeaea;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+.article__badge {
+    font-size: 0.8em;
+    font-weight: bold;
+    border-radius: 3px;
+    padding: 0.5em;
+    text-transform: uppercase;
+    color: white;
+    max-width: fit-content;
+}
+
+.article__badge--news {
+    background-color: #98dc62;
+}
+
+.article__badge--team {
+    background-color: #dc5e53;
+}
+
+.article__badge--work {
+    background-color: #0766f0;
+}
+
+.article__title {
+    font-weight: bold;
+    font-size: 1.5em;
+    margin: 1.3em 0;
+}
+
+.article__meta {
+    font-size: 0.8em;
+}
+
+.article__meta__image {
+    width: 25px;
+    vertical-align: middle;
+}
+
+.article__meta__author {
+    font-weight: bold;
+    padding-left: 1em;
+}
+
+.article__meta__date {
+    color: #aaa;
+}
+
+.article__text {
+    margin: 1em 0;
+    line-height: 1.5;
+}
+
+.article__detail {
+    color: #007bff;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-top: auto;
+}
+
+.article__detail:hover {
+    color: #0056b3;
+}
+
+
+/* CSS pour le formulaire de contact */
+
+#contact {
+    display: flex;
+    padding: 1em;
+    margin: 1em;
+    border: 1px solid #eaeaea;
+    width: 100%;
+}
+
+#form {
+    width: 100%;
+}
+
+#form fieldset {
+    border-left: 1px solid #4cced3;
+    padding: .5em 1em 0;
+    margin-bottom: 2em;
+}
+
+#form legend {
+    margin-left: -.3em;
+    font-size: 1.1em;
+}
+
+.form-row {
+    display: flex;
+    margin-bottom: .4em;
+}
+
+.form-row .label {
+    flex-basis: 30%;
+    margin: 0;
+    padding-right: 3%;
+    font-size: 0.8em;
+}
+
+/* tous les enfants direct d'un élément ayant la class form-row */
+/* sauf les .label, vu qu'ils ont des règles plus spécifiques définies juste au dessus 😉 */
+.form-row>* {
+    flex-basis: 70%;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+}
+
+.input-group>* {
+    margin: 0 .5em 0 0;
+}
+
+/* moche mais bon, sinon la cochette prend toute la largeur (enfin, 70%), pas sûr que ça rende bien sur tous les navigateurs 🤔 */
+#info {
+    flex-basis: 1em;
+}
+
+#contact input[type=text],
+#contact input[type=email],
+#contact textarea,
+#contact select {
+    background-color: #f9f9f9;
+    border: none;
+    border-bottom: 1px solid #4cced3;
+}
+
+#contact input[type=email] {
+    width: 100%;
+}
+
+#contact textarea {
+    padding: .2em;
+    width: 100%;
+}
+
+#contact button {
+    background-color: #4cced3;
+    color: white;
+    font-weight: 700;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.3em;
+    padding: 5px 10px;
+}
+@media (max-width: 1024px) {
+    .main {
+      display: block;
+    }
+
+    .article {
+        margin: 0;
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 720px) {
+    .footer__menu__link {
+        margin: 0.5em;
+    }
+
+}
+
+@media (max-width: 640px) {
+
+    #container {
+        display: initial;
+    }
+
+    section {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 320px) {
+    .footer__menu__link {
+        margin: 0.5em;
+    }
+}
+
