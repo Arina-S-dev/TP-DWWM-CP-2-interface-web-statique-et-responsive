@@ -258,40 +258,28 @@ section {
     font-size: 1.3em;
     padding: 5px 10px;
 }
+
 @media (max-width: 1024px) {
     .main {
       display: block;
     }
-
     .article {
         margin: 0;
         width: 100%;
     }
-
 }
 
 @media (max-width: 720px) {
     .footer__menu__link {
         margin: 0.5em;
     }
-
 }
 
 @media (max-width: 640px) {
-
     #container {
         display: initial;
     }
-
     section {
         width: 100%;
     }
-
 }
-
-@media (max-width: 320px) {
-    .footer__menu__link {
-        margin: 0.5em;
-    }
-}
-
